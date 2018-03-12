@@ -1,0 +1,1294 @@
+@font-face {
+    font-family: raleway;
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/RalewayRegular/RalewayRegular.eot);
+    src: url(../fonts/RalewayRegular/RalewayRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewayRegular/RalewayRegular.woff) format("woff"), url(../fonts/RalewayRegular/RalewayRegular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: raleway;
+    font-weight: 700;
+    font-style: normal;
+    src: url(../fonts/RalewayBold/RalewayBold.eot);
+    src: url(../fonts/RalewayBold/RalewayBold.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewayBold/RalewayBold.woff) format("woff"), url(../fonts/RalewayBold/RalewayBold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: raleway;
+    font-weight: 800;
+    font-style: normal;
+    src: url(../fonts/RalewayExtraBold/RalewayExtraBold.eot);
+    src: url(../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewayExtraBold/RalewayExtraBold.woff) format("woff"), url(../fonts/RalewayExtraBold/RalewayExtraBold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: raleway;
+    font-weight: 300;
+    font-style: normal;
+    src: url(../fonts/RalewayLight/RalewayLight.eot);
+    src: url(../fonts/RalewayLight/RalewayLight.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewayLight/RalewayLight.woff) format("woff"), url(../fonts/RalewayLight/RalewayLight.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: raleway;
+    font-weight: 600;
+    font-style: normal;
+    src: url(../fonts/RalewaySemiBold/RalewaySemiBold.eot);
+    src: url(../fonts/RalewaySemiBold/RalewaySemiBold.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewaySemiBold/RalewaySemiBold.woff) format("woff"), url(../fonts/RalewaySemiBold/RalewaySemiBold.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: raleway;
+    font-weight: 100;
+    font-style: normal;
+    src: url(../fonts/RalewayThin/RalewayThin.eot);
+    src: url(../fonts/RalewayThin/RalewayThin.eot?#iefix) format("embedded-opentype"), url(../fonts/RalewayThin/RalewayThin.woff) format("woff"), url(../fonts/RalewayThin/RalewayThin.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: firasans;
+    font-weight: 400;
+    font-style: normal;
+    src: url(../fonts/FiraSansRegular/FiraSansRegular.eot);
+    src: url(../fonts/FiraSansRegular/FiraSansRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/FiraSansRegular/FiraSansRegular.woff) format("woff"), url(../fonts/FiraSansRegular/FiraSansRegular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?v=4.7.0);
+    src: url(../fonts/font-awesome-4.7.0/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"),
+    url(../fonts/font-awesome-4.7.0/fontawesome-webfont.woff2?v=4.7.0) format("woff2"),
+    url(../fonts/font-awesome-4.7.0/fontawesome-webfont.woff?v=4.7.0) format("woff"),
+    url(../fonts/font-awesome-4.7.0/fontawesome-webfont.ttf?v=4.7.0) format("truetype"),
+    url(../fonts/font-awesome-4.7.0/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+html, body {
+    height: 100%
+}
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.75;
+    font-family: raleway, sans-serif;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+body.is-home .site-header {
+    min-height: 700px;
+    height: 100vh;  /* обычно когда шапка большая это значит что она занимает все пространство первого экрана, соответсвенно height: 100vh;*/
+    background-color: #151515
+}
+
+body.is-home .site-header .top-line {
+    padding-top: 40px;
+    position: absolute; /* Если я делаю элемент на всю ширину, то должен указать width: 100% */
+    width: 100%;
+    z-index: 1;
+}
+
+.site-header {
+    color: #fff;
+}
+
+section, header {
+    position: relative;
+    background-size: cover; /* Изображение будет заполнять все пространство */
+    background-position: center;
+    background-color: #fff
+}
+
+section h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+section.inverse {
+    color: #fff
+}
+
+.text-center {
+    text-align: center;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;   /* 4 послед. свойства. Делаю фиксированну позицию поверх всего контента */
+    z-index: 100;
+    background-color: #1a1a1a;
+}
+
+.preloader .pulse {
+    position: relative;
+    left: 50%;
+    top: 50vh;  /* vh - это высота экрана. Грубо говоря центрируем */
+    margin: -40px 0 0 -40px;
+}
+
+.preloader .pulse:before, .preloader .pulse:after {
+    content: '';
+    border: 5px solid #323232;
+    width: 80px;
+    height: 80px;
+    border-radius: 500px;
+    position: absolute;
+}
+
+.preloader .pulse:before {
+    animation: pulse-outer .8s ease-in infinite;    /* параметр infinite, обычно ставит в анимацию */
+}
+
+.preloader .pulse:after {
+    animation: pulse-inner .8s linear infinite;
+}
+
+@keyframes pulse-outer {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .5
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse-inner {    /* получется пульсация */
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.4; /* Правило хорошего дизайна! Всегда делать заголовки на несколько пунктов меньше чем в целом у документа */
+    text-transform: uppercase;
+}
+
+.h1.h-first, .h2.h-first, .h3.h-first, .h4.h-first, .h5.h-first, .h6.h-first {
+    color: #F9C869;
+}
+
+.h1.h-first span, .h2.h-first span, .h3.h-first span, .h4.h-first span, .h5.h-first span, .h6.h-first span {
+    color: #fff
+}
+
+.logo img {
+    width: 125px;
+    height: auto;   /* На некоторых старых устройствах, svg может растикаться по выстоте, поэтому */
+    margin-left: 45px;
+}
+
+.phone {
+    position: absolute;
+    right: 85px;
+    top: 45px;
+    font-family: 'firasans', sans-serif;
+    font-size: 22px;
+    white-space: nowrap;    /* Строка не будет переноситься при адптивности, что бы всегда текст был ровным */
+}
+
+.phone .fa {
+    color: #555;
+    font-size: 22px;
+    margin-right: 3px;
+}
+
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 34px;
+}
+
+.hamburger .hamburger-box {
+    width: 34px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+    border-radius: 0;
+    background-color: #fff;
+    width: 34px;
+    height: 2px;
+}
+
+#my-menu .mm-panels .mm-navbar .mm-title img {
+    width: 128px;
+    height: auto;
+    padding: 35px 0 35px 0;
+}
+
+.mm-navbar>* {
+    padding: 0;
+}
+
+.mm-navbar {
+    height: auto;
+    border-bottom: none;
+    position: relative;
+}
+
+.mm-panels>.mm-panel:after, .mm-panels>.mm-panel:before {
+    display: none;
+}
+
+.mm-panels>.mm-panel.mm-hasnavbar {
+    padding-top: 0;
+}
+
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview {
+    margin-top: 0;
+}
+
+.mm-panels>.mm-panel>.mm-listview {
+    margin: 0;
+}
+
+.mm-listview>li:not(.mm-divider):after {
+    display: none;
+}
+
+.mm-listview>li>a, .mm-listview>li>span {
+    padding: 8px 10px 8px 50px;
+}
+
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next),
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>span {
+    background-color: transparent;
+    color: #F9C869;
+}
+
+#my-menu .mm-panels .mm-listview li.active {
+    color: #F9C869;
+}
+
+#my-menu .mm-panels .mm-listview li:hover {
+    color: #F9C869;
+    transition: color .25s ease;
+}
+
+#my-menu .mm-panels .mm-listview li a:hover::before {
+    color: #F9C869;
+    transition: color .25s ease;
+}
+
+#my-menu .mm-panels .mm-listview li a::before {
+    content: "\f219";
+    font-family: FontAwesome, sans-serif;
+    margin-right: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+html.mm-opened {
+    overflow-y: scroll;
+}
+
+#my-menu .mm-panels .mm-hasnavbar.mm-opened {
+    right: -18px;   /* приём, что бы убрать скрол */
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    background-color: #F9C869;
+    padding: 15px 45px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border-radius: 2px;
+    text-align: center;
+    position: relative;
+    outline: none;
+    transition: background-color 0.1s ease;
+    cursor: pointer;
+}
+.button::after {
+    transition: background-color 0.2s ease;
+    position: absolute;
+    content: "";
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: #5f4004;
+    opacity: 0.18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0;
+}
+.button:focus, .button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+.button:hover {
+    background-color: #fad182;
+}
+.button:hover::after {
+    opacity: 0.22;
+}
+.button:active {
+    background-color: #f8bf50;
+}
+.button:active::after {
+    opacity: 0.32;
+}
+
+.header-flex {
+    display: flex;
+    height: 100%;
+    position: relative; /* для того, что бы все абсолютно позиционируемые элементы внутри flex не выезжали за рамки */
+    top: 0
+}
+
+.flex-center {
+    margin: auto;   /* для того, что бы позиционировать контент по центру, досточно указать margin: auto*/
+}
+
+.composition {
+    text-align: center;
+    position: relative;
+}
+
+.composition .button {
+    margin-top: 10px;
+}
+
+.welcome p {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;    /* выравнивает флекс-элементы внутри контейнера */
+    white-space: nowrap;
+    margin: 0 0 -10px 0;
+}
+
+.welcome p span {
+    margin: 0 10px;
+}
+
+.welcome p::after, .welcome p::before {
+    content: '';    /* когда стилизизую before и after под какие то блочные элементы, то нужно указывать content: '' */
+    height: 1px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.welcome .h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 70px;
+    margin: 0;
+    line-height: 1.6;
+    border-bottom: 1px solid #fff;
+    white-space: nowrap;
+}
+
+.welcome strong {
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block; /* важный элемент!!! strong - строчный элемент, поэтому можно сразу перевести в блочный.
+    Что бы в окружении других элементов, чувствовал себя по другому */
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.welcome strong .fa {
+    font-size: 12px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.welcome strong .fa:last-child {
+    margin-left: 10px;
+    margin-right: inherit;  /* сброс отступа */
+}
+
+.header-social {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 13px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.soc {
+    margin: auto;
+}
+
+.soc ul {
+    padding: 0;
+    margin: 0;
+}
+
+.soc ul li {
+    list-style: none;
+}
+
+.soc ul li a {
+    font-size: 17px;
+    color: #2c2c2c;
+    display: block; /* ссылка - строчный элемент. И если это какой-то декоративный элемент в виде ссылки,
+    то его необходимо сделать блочным */
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 38px;
+    width: 38px;
+    line-height: 38px;  /* Если указаны ширина и высота, то что бы иконки были центрированы, нужно указать line-height */
+    text-align: center;
+    margin: 18px 0;
+    border-radius: 10em;
+    transition: background-color .25s ease;
+}
+
+.soc ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header-bottom-info {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Если делаю top 0 bottom 0, то нужно указать еще left 0 что бы на различных разрешениях экранов, он никуда не уехал */
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(21, 21, 21, 0.15);
+    padding: 13px 0;
+}
+
+.col-md-4.center_block {
+    text-align: center;
+    font-family: firasans, sans-serif;
+}
+
+.header-bottom-info .fa {
+    color: #555;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.carousel-services .owl-item:nth-child(3n+1),
+.carousel-services-aside .owl-item:nth-child(3n+1) {
+    background-color: #66C7CD;
+}
+
+.carousel-services .owl-item:nth-child(3n+2),
+.carousel-services-aside .owl-item:nth-child(3n+2) {
+    background-color: #F86868;
+}
+
+.carousel-services .owl-item:nth-child(3n+3),
+.carousel-services-aside .owl-item:nth-child(3n+3) {
+    background-color: #F9C766;
+}
+
+.owl-carousel.carousel-services {
+    background-color: black;
+}
+
+.carousel-services-item {
+    color: #fff;
+    font-family: raleway, sans-serif;
+    position: relative; /* что бы никакие элементы не вылазили за рамки */
+    display: flex;
+    flex-direction: column-reverse; /* меняет местами */
+}
+
+.carousel-services-item:hover .carousel-services-images {
+    opacity: 1;
+}
+
+.carousel-services .owl-item:nth-child(2n+2) .carousel-services-item {   /* работа с каждым вторым элементом */
+    flex-direction: column;
+}
+
+.carousel-services-images {
+    background-size: cover; /* что бы картинка полностью помещалась в квадрат */
+    background-position: center;
+    opacity: .9;
+    transition: opacity .5s ease;
+}
+
+.owl-carousel, .owl-carousel.carousel-services {
+    backface-visibility: inherit;   /* исправляет баги при вращении карусели */
+}
+
+.carousel-services-item .carousel-logo {
+    text-align: center;
+}
+
+.carousel-services-item .carousel-logo img {
+    width: 100px;
+    height: auto;
+    display: inline-block;  /* благодаря этому я могу центрировать изображение предыдущим действием */
+}
+
+.carousel-services-content {
+    padding: 50px 5%;
+}
+
+.carousel-services-composition {
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-services-item .h3 {
+    font-weight: 800;
+    font-size: 26px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.carousel-services-item .h3 span {
+    font-weight: 300;
+    font-size: 18px;
+    display: block; /* строчные элементы подчиняються правилу line-height а это порой не надо */
+}
+
+.carousel-services-list {
+    list-style: none;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-services-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .12)
+}
+
+.carousel-services-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 30px;
+}
+
+.carousel-services-list li strong .fa {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button-white {
+    background-color: #fff;
+    color: #444;
+}
+
+.carousel-services-composition .button-white::after {
+    background-color: #000;
+    opacity: .1;
+}
+
+.carousel-services-composition .button-white:hover::after {
+    opacity: 0.3;
+}
+
+.carousel-services .owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;    /* позиционируемые абсолютно элементы теряют свою ширину, поэтому width: 100% */
+}
+
+.carousel-services .owl-nav > div {
+    position: absolute; /* так как они будут разьежатся по разным сторонам */
+    background-color: #fff;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 26px;
+    color: #222;
+}
+
+.carousel-services .owl-nav .owl-prev {
+    left: 0;
+}
+
+.carousel-services .owl-nav .owl-next {
+    right: 0;
+}
+
+.s-photo-gallery, .s-review, .s-partners {
+    padding: 5% 0;
+}
+
+.section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3D3C3C;
+    opacity: .92;
+}
+
+.s-photo-gallery .h2 {
+    font-weight: 800;
+    color: #F9C766;
+    margin-bottom: 25px;
+}
+
+.s-photo-gallery .h2 span {
+    color: #fff;
+}
+
+.s-photo-gallery p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.fotorama {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fotorama__nav-wrap {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    padding: 0 25px;
+    width: 100%;
+}
+
+.fotorama__thumb {
+    border: 4px #fff solid;
+    transition: border-color .5s ease;
+}
+
+.fotorama__thumb-border {
+    border-color: #3d3c3c;
+}
+
+.fotorama__nav.fotorama__shadows--right:after, .fotorama__stage.fotorama__shadows--right:after,
+.fotorama__nav.fotorama__shadows--left:before, .fotorama__stage.fotorama__shadows--left:before {
+    display: none;
+}
+
+.fotorama__arr {
+    background: none;
+    font-family: FontAwesome, sans-serif;
+    font-size: 32px;
+    width: auto;
+    margin: -16px 10px 0 10px;
+}
+
+.fotorama__arr.fotorama__arr--prev::before {
+    content: '\f104';
+}
+
+.fotorama__arr.fotorama__arr--next::before {
+    content: '\f105';
+}
+
+.s-callback {
+    background-size: contain;   /* contain значит, вмещатся */
+    background-repeat: no-repeat;
+    background-position: 10%;   /* Так как картинка заезжает на правую часть, соответсвенно у нее не должно быть какой-то фиксированной позиции */
+}
+
+.s-callback::before {   /* жёлтый блок будет заполнять всю левую часть до края, и не важно какой ширины будет сайт, не должно быть фиксированного прямоугольника */
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-color: #F9C766;
+    opacity: .92;
+}
+
+.success {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    /* всё это, полностью растянет элемент */
+    text-transform: uppercase;
+    font-weight: bold;
+    /*display: flex;  !* соответсвенно, если он flex, значит он будет центрироватся *!*/
+    z-index: 10;
+}
+
+.success span {
+    margin: auto;   /* что бы он центрировался, нужно задать margin: auto */
+}
+
+.success ~ * {
+    transition: all .5s ease;   /* ease - ровное размытие */
+}
+
+.success.active ~ * {
+    opacity: .5;
+    filter: blur(10px); /* Размытие */
+}
+
+input, textarea, select,
+.selectize-control .selectize-input {
+    display: inline-block;
+    background-color: transparent;  /* прозрачный с обводкой */
+    border: 1px solid #E0B660;
+    border-bottom: 2px solid #E0B660;
+    border-radius: 2px;
+    padding: 8px 22px;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.selectize-control.single .selectize-input.input-active {
+    background-color: transparent;
+}
+
+.selectize-control .selectize-input {
+    box-shadow: none;
+    overflow: inherit;
+    line-height: inherit;
+    text-align: left;
+}
+
+.selectize-control.single .selectize-input:after {
+    border: none;
+    content: '\f107';
+    font-family: FontAwesome;
+    position: absolute;
+    right: 30px;
+    top: 12px;
+}
+
+.selectize-control.single .selectize-input.dropdown-active:after {
+    content: '\f106';
+}
+
+.selectize-control.single .selectize-input input {
+    font-size: inherit;
+}
+
+.selectize-control .selectize-input.dropdown-active::before {
+    background-color: transparent;
+}
+
+.selectize-dropdown {
+    font-size: 15px;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+}
+
+.selectize-dropdown .option {
+    padding: 10px 22px;
+}
+
+.selectize-dropdown .option.active {
+    background-color: #fef4e1;
+}
+
+select {
+    padding: 20px 22px;
+}
+
+.callback {
+    padding: 25% 0;
+    color: #fff;
+    position: relative;
+}
+
+.callback-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.formhead {
+    margin-top: 0;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.formhead p {
+    margin-top: 0
+}
+
+.callback input, textarea, select,
+.selectize-input.items {
+    width: 100%;
+    color: #fff;
+    margin-top: 17px;
+}
+
+.callback input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.callback input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.callback input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder {
+    color: #fff;
+}
+
+.callback select {
+    color: #333;
+}
+
+.callback .button {
+    margin-top: 40px;
+}
+
+.quotes {
+    position: absolute;
+    width: 100%;
+}
+
+.quotes::before, .quotes::after {
+    content: ',,';
+    position: absolute;
+    top: 182px;
+    font-size: 56px;
+    font-family: 'Times New Roman', sans-serif;
+    font-weight: bold;
+    line-height: 0;
+    color: #E0B660;
+    transform: rotate(180deg);
+    display: block;
+}
+
+.quotes::before {
+    top: 220px;
+    left: -60px;
+}
+
+.quotes::after {
+    right: -60px;
+    transform: rotate(0);
+}
+
+.reviews {
+    text-align: center;
+}
+
+.owl-dots { /* owl-dots - это контейнер для каждой точки */
+    width: 100%;    /* Что бы они были центрированы, нужно указать ширину 100%, а что бы это центрирование сработало,
+    нужно самим точкам указать display: inline-block */
+    text-align: center;
+    margin-top: 60px;
+}
+
+.owl-dots .owl-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 10em;    /* для круглых элементов можно задать 10em */
+    margin: 5px;
+    transition: background-color .5s ease, transform .5s ease;  /* transform - это тот что в .active */
+}
+
+.owl-dots .owl-dot.active {
+    background-color: #E0B660;
+    transform: scale(1.3);  /* Можно увеличить и border-radius, но если мы так сделаем то каждый активный
+    элемент будет отодвигать предыдущий и будут сдвиги */
+}
+
+.review {
+    margin-top: 20px;
+}
+
+.review .review-header {
+    font-family: 'Times New Roman', sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.review .review-data {
+    font-family: 'Times New Roman', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #888;
+}
+
+.review .review-stars {
+    margin: 18px 0 30px;
+    font-size: 14px;
+    color: #E0B660;
+}
+
+.review .review-stars .fa {
+    margin: 0 2.5px;
+}
+
+.review .review-text {
+    color: #95989A;
+}
+
+.s-partners.section-overlay::before {
+    background-color: #fff;
+}
+
+.s-partners .h2 {
+    margin-top: 10px;
+}
+
+.s-partners .h2 span {
+    color: #F9C869;
+}
+
+.partners .partner {
+    height: 100%;   /* это для центрирования flex-ом */
+    display: flex;
+    margin: auto;
+}
+
+.partners .owl-stage {
+    display: flex;
+}
+
+.partners .owl-item {
+    margin-top: 30px;
+}
+
+.partners .owl-item img {
+    max-width: 100%;
+    width: auto;
+    display: inline-block;
+    margin: auto;   /* для того что бы центрировались относительно блока */
+}
+
+.partners .owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;    /* все эти 3 параметра обычны для навигации */
+    z-index: 2;
+}
+
+.partners .owl-nav > div {
+    position: absolute;
+    top: 50px;
+    color: #999;
+    font-size: 30px;
+    transition: opacity .5s ease;
+    padding: 0 10px;
+}
+
+.partners .owl-nav > div:hover {
+    opacity: .6;
+}
+
+.partners .owl-nav .owl-prev {
+    left: -60px;
+}
+
+.partners .owl-nav .owl-next {
+    right: -60px;
+}
+
+.mail-footer {
+    background-color: #242424;
+    padding: 3% 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-column {
+    margin: 15px 0; /* стандарт bootstrap сетки */
+}
+
+.logo-footer {
+    width: 125px;
+    height: auto;
+}
+
+.logo-footer + p {
+    color: #666;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.social-footer {
+    margin-top: 38px;
+}
+
+.social-footer .soc li {
+    display: inline-block;
+    margin: 3px;
+}
+
+.social-footer .soc li a {
+    color: #ababab;
+    margin-bottom: 0;
+    transition: color .5s ease, background-color .5s ease;
+}
+
+.social-footer .soc li a:hover {
+    color: rgba(255, 255, 255 .8);
+}
+
+.footer-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;  /* 3 параметра, это сброс для ul */
+}
+
+.footer-menu ul li.active a {
+    color: #F9C869;
+}
+
+.footer-menu ul li.active a::before {
+    color: #F9C869;
+}
+
+.footer-menu ul li a {
+    color: #979797;
+    transition: color .5s ease;
+    display: inline-block;  /* так как предварительно будет стоять через before иконка, нужно
+    указать для тега a, display: inline-block, так как они будут находиться на одной линии */
+    padding: 3.5px 0 4px 20px;
+    text-decoration: underline;
+    position: relative; /* так как иконки ::before будут иметь position: absolute,
+    соответсвенно у родителя должен быть position: relative */
+}
+
+.footer-menu ul li a::before {
+    position: absolute;
+    font-family: FontAwesome;
+    content: '\f219';
+    left: 0;
+    font-size: 12px;
+    color: #fff;
+    transition: color .5s ease;
+    top: 6px;
+    margin-right: 12px;
+}
+
+.footer-menu ul li a:hover, .footer-menu ul li a:focus {    /* нужно оформлять вместе */
+    color: #F9C869;
+}
+
+.footer-menu ul li a:hover::before, .footer-menu ul li a:focus::before {
+    color: #F9C869;
+}
+
+.footer-addr {
+    position: relative;
+    font-size: 15px;
+    padding-left: 24px;
+    margin: 0 0 20px;
+}
+
+.footer-addr .fa {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 18px;
+    color: #555;
+}
+
+.footer-addr .footer-phone {
+    font-size: 26px;
+    font-family: 'firasans', sans-serif;
+    padding-top: 10px;
+    display: block; /* так как это span, нужно сделать его блочным элементом */
+    white-space: nowrap;
+}
+
+.footer-addr .footer-phone .fa {
+    top: 22px;
+    font-size: 22px;
+    left: 3px;
+}
+
+.map {
+    max-height: 200px;  /* для мобильных устройств */
+    opacity: .7;
+    transition: opacity .5s ease;
+}
+
+.map:hover {
+    opacity: 1;
+}
+
+.top {
+    position: fixed;
+    bottom: 25px;
+    right: -100px;
+    background-color: #e0e0e0;
+    z-index: 12;
+    border-radius: 10em;
+    color: #666;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    text-align: center; /* что бы центрировать иконку по горизонтали, text-align: center; */
+    line-height: 50px;  /* что бы центрировать по вертикали line-height */
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: .5;
+}
+
+.top:hover {
+    color: #fff;
+    background-color: #F9C869;
+    opacity: 1;
+}
+
+.top i {
+    line-height: 0;
+}
+
+.top.active {
+    right: 25px;
+}
+
+@media only screen and (max-width : 1200px) {
+    .welcome .h1 {
+        font-size: 60px;
+    }
+
+    .header-bottom-info .col-md-4 {
+        font-size: 14px;
+    }
+
+    .carousel-services-item {
+        flex-direction: column;
+    }
+
+    .s-callback {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .welcome .h1 {
+        font-size: 46px;
+    }
+
+    .composition p {
+        font-size: 14px;
+    }
+
+    .s-callback::before {
+        width: 100%;
+    }
+
+    .callback {
+        padding: 10% 0;
+    }
+
+    .footer-addr {
+        margin-bottom: 15px;
+    }
+
+    .footer-addr .footer-phone {
+        font-size: 24px;
+        padding-top: 0;
+    }
+
+    .footer-addr .footer-phone .fa {
+        top: 9px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .top-line .phone {
+        font-size: 20px;
+    }
+
+    .header-bottom-info {
+        padding: 4px 0;
+    }
+
+    .col-md-4 {
+        text-align: center;
+    }
+
+    .quotes {
+        display: none;
+    }
+
+    .s-partners .h2 {
+        margin: 0;
+    }
+
+    .partners .owl-nav .owl-prev {
+        left: 0;
+    }
+
+    .partners .owl-nav .owl-next {
+        right: 0;
+    }
+
+    .social-footer {
+        margin-top: 0;
+    }
+
+    .social-footer .soc li a {
+        margin-top: 0;
+    }
+
+    .footer-menu {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .mm-listview>li>a, .mm-listview>li>span {
+        padding-left: 5px;
+    }
+
+    .welcome p {
+        font-size: 9px;
+    }
+
+    .welcome .h1 {
+        font-size: 32px;
+    }
+
+    .welcome strong {
+        font-size: 16px;
+        margin-bottom: 15px
+    }
+
+    .button {
+        padding: 13px 41px;
+    }
+}
+
+@media only screen and (max-width : 320px) {
+    .welcome .h1 {
+        font-size: 27px;
+    }
+
+    .welcome strong {
+        font-size: 14px;
+    }
+}

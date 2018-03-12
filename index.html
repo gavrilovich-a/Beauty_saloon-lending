@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #151515; }</style>
+
+</head>
+
+<body class="is-home">
+<div class="preloader"><div class="pulse"></div></div>
+
+<div id="my-page">
+    <div id="my-header">
+        <header class="site-header" style="background-image: url('img/top-bg.jpg')">    <!-- изображение для админки в cms -->
+            <div class="top-line">
+                <a href="#" class="logo">
+                    <img src="img/logo-1.svg" alt="Салон красоты">
+                </a>
+                <div class="phone hidden-xs">
+                    <i class="fa fa-mobile"></i>
+                    +38 068 530 2433
+                </div>
+                <a href="#my-menu" class="hamburger hamburger--emphatic">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </a>
+                <nav id="my-menu">
+                    <ul>
+                        <li><a href="#">Парикмахерский сервис</a></li>
+                        <li class="active"><a href="#">Косметологический сервис</a></li>
+                        <li><a href="#">Маникюрный сервис</a></li>
+                        <li><a href="#">Массаж и SPA</a></li>
+                        <li><a href="#">Солярий</a></li>
+                        <li><a href="#">Наши специалисты</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Прайс-лист</a></li>
+                        <li><a href="#">Наши сертификаты</a></li>
+                        <li><a href="#">О салоне</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-flex">   <!-- контейнер для flex -->
+                <div class="flex-center">   <!-- центральная часть -->
+                    <div class="container"> <!-- bootstrap контейнер. Нужен для того что бы контент центрировался -->
+                        <div class="row">   <!-- там где есть container, там всегда есть и row -->
+                            <div class="col-sm-7 col-xs-10">
+                                <div class="composition"> <!-- это основная композиция, вся видимая часть -->
+                                    <div class="welcome">
+                                        <p><span>Добро пожаловать в профессиональный</span></p>
+                                        <h1 class="h1">салон красоты</h1>   <!-- лучше стилизовать классы! Для seo-шника,
+                                        может решить что сдесь тег h1 неуместен и может его заменить а это скажется на верстке -->
+                                        <strong><i class="fa fa-star"></i>в киеве<i class="fa fa-star"></i></strong>
+                                    </div>
+                                    <p><strong>S&amp;Mitler</strong> – это салон красоты бизнес-класса. Мастера салона дарят посетителям уверенность в себе и
+                                        индивидуальный стиль. Здесь представлены все самые востребованные услуги бьюти-индустрии.</p>
+                                    <a href="#" class="button">О салоне</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-social">
+                <nav class="soc">    <!-- В nav обычно располагается ul li -->
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-bottom-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <i class="fa fa-location-arrow"></i> г. Киев, ул. Ольгинська, 3, м. Профсоюзная
+                        </div>
+                        <div class="col-md-4 col-sm-6 center_block">
+                            <i class="fa fa-mobile"></i> +38 068 530 2433
+                        </div>
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <i class="fa fa-clock-o"></i> Время работы: ежедневно, 10:00 - 22:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="my-content">
+        <section class="s-services">
+            <div class="owl-carousel carousel-services">    <!-- это обертка для карусели. Там где есть обертка должен быть item.
+             Когда выполняю стилизацию карусели owl-carousel, мне не нужно использовать сетку bootstrap. Сам плагин
+             имеет адаптацию для устройств -->
+                <div class="carousel-services-item">    <!-- Там где есть обертка должен быть item. -->
+                    <div class="carousel-services-content">
+                        <div class="carousel-services-composition">
+                            <div class="carousel-logo"> <!-- это wrapper для картинки -->
+                                <img src="img/logo-2.svg" alt="Название компании">
+                            </div>
+                            <h3 class="h3">Косметологический сервис</h3>    <!-- Что бы в админке контент менеджер не заморачивлся какими то тегами, лучше сделать скрипт  -->
+                            <ul class="carousel-services-list">
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                            </ul>
+                            <a href="#" class="button button-white">Все услуги</a>
+                        </div>
+                    </div>
+                    <div class="carousel-services-images" style='background-image: url("img/service.png")'></div>
+                </div>
+
+                <div class="carousel-services-item">
+                    <div class="carousel-services-content">
+                        <div class="carousel-services-composition">
+                            <div class="carousel-logo"> <!-- это wrapper для картинки -->
+                                <img src="img/logo-2.svg" alt="Название компании">
+                            </div>
+                            <h3 class="h3">Парикмахерский сервис</h3>
+                            <ul class="carousel-services-list">
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                            </ul>
+                            <a href="#" class="button button-white">Все услуги</a>
+                        </div>
+                    </div>
+                    <div class="carousel-services-images" style='background-image: url("img/service2.png")'></div>
+                </div>
+
+                <div class="carousel-services-item">
+                    <div class="carousel-services-content">
+                        <div class="carousel-services-composition">
+                            <div class="carousel-logo"> <!-- это wrapper для картинки -->
+                                <img src="img/logo-2.svg" alt="Название компании">
+                            </div>
+                            <h3 class="h3">Маникюрный сервис</h3>
+                            <ul class="carousel-services-list">
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                            </ul>
+                            <a href="#" class="button button-white">Все услуги</a>
+                        </div>
+                    </div>
+                    <div class="carousel-services-images" style='background-image: url("img/service3.png")'></div>
+                </div>
+
+                <div class="carousel-services-item">
+                    <div class="carousel-services-content">
+                        <div class="carousel-services-composition">
+                            <div class="carousel-logo"> <!-- это wrapper для картинки -->
+                                <img src="img/logo-2.svg" alt="Название компании">
+                            </div>
+                            <h3 class="h3">Косметологический сервис</h3>
+                            <ul class="carousel-services-list">
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                                <li>Ключевая услуга #1 - <strong>8500 <i class="fa fa-rub"></i></strong></li>
+                            </ul>
+                            <a href="#" class="button button-white">Все услуги</a>
+                        </div>
+                    </div>
+                    <div class="carousel-services-images" style='background-image: url("img/service.png")'></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-photo-gallery inverse section-overlay" style='background-image: url("img/photos/foto-16.jpg")'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">  <!-- Самое ходовое значение среди колонок md -->
+                        <h2 class="h2">Королевский салон</h2>
+                        <p><strong>S&amp;Mitler</strong> встречает своих посетителей современным дизайном и атмосферой уюта: огромное светлое пространство, изящная мебель, мягкие бархатные кресла.
+                            Это отличное место для того, чтобы посвятить пару часов только себе!</p>
+                        <p>Дамам здесь предложат экстраординарный ассортимент косметологических процедур и качественный нейл-сервис, а мужчин порадуют услугами стилистов и уходом за лицом.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="section-gallery fotorama" data-nav="thumbs" data-thumbwidth="110" data-thumbheight="70"
+                             data-thumbborderwidth="4" data-thumbmargin="10" data-width="100%">
+                            <img src="img/photos/small/foto-13.jpg" alt="Изображение салона">
+                            <img src="img/photos/small/foto-15.jpg" alt="Изображение салона">
+                            <img src="img/photos/small/foto-16.jpg" alt="Изображение салона">
+                            <img src="img/photos/small/foto-18.jpg" alt="Изображение салона">
+                            <img src="img/photos/small/foto-19.jpg" alt="Изображение салона">
+                            <img src="img/photos/small/foto-23.jpg" alt="Изображение салона">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-callback inverse" style="background-image: url('img/madama.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6">  <!-- Эта колонка будет находиться с левой стороны и если нужно что бы колонка была справа, мы должны указать класс offset -->
+                        <form class="callback">
+                            <div class="success">   <!-- Является wpapper-ом который будет перекрывать всю форму -->
+                                <span>Спасибо за заявку!</span>   <!-- будем вертикально и горизонтально, центрировать что бы всегда был в центре -->
+                            </div>
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="Smitler">
+                            <input type="hidden" name="admin_email" value="gavrilovich.a@gmail.com">
+                            <input type="hidden" name="form_subject" value="Smitler ФОРМА">
+                            <!-- END Hidden Required Fields -->
+
+                            <input type="hidden" name="Страница" value="">  <!-- С какой именно страницы пришло сообщение -->
+
+                            <div class="callback-logo">
+                                <img src="img/logo-2.svg" alt="Логотип">
+                            </div>
+                            <div class="formhead">ОСТАВИТЬ ЗАЯВКУ</div>  <!-- Не является seo элементом, поэтому специалист по seo не выделит его тегом h -->
+                            <p>Оставьте заявку и мы перезвоним вам в течение 15 минут.</p>
+
+                            <input type="text" name="Имя" placeholder="Ваше имя..." required>
+                            <input type="text" name="Телефон" placeholder="Ваш телефон..." required>
+                            <select name="Услуга">
+                                <option value disabled selected>Выберите услугу...</option>
+                                <option>Парикмахерский сервис</option>   <!-- Содержимое option зачастую является самим value -->
+                                <option>Косметологический сервис</option>
+                                <option>Маникюрный сервис</option>
+                                <option>Масаж и SPA</option>
+                                <option>Солярий</option>
+                            </select>
+                            <button class="button button-white">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-reviews inverse section-overlay" style="background-image: url('img/bg-2.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12"> <!-- чтобы на моб. устройстве не касалось краёв девайса -->
+                        <h2 class="h2 text-center h-first">Отзывы наших клиентов</h2>
+                    </div>
+
+                    <div class="col-sm-8 col-sm-offset-2">  <!-- делаем отступ средствами bootstrap (можно сделать max-width),
+                    а что бы его центрировать, нужно добавить col-sm-offset-2. Он делает отступ слева 12-8=4 4/2=2 колонок останется справа -->
+                        <div class="quotes"></div>
+
+                        <div class="owl-carousel reviews">  <!-- owl-carousel - для инициализации карусели. reviews - уникальное название карусели -->
+                            <div class="review">    <!-- Это контэйнер, в котором будет содержатся один отдельный отзыв -->
+                                <div class="review-header">Оксана</div>
+                                <div class="review-data">29.07.16 (Стрижка)</div>
+                                <div class="review-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="review-text">
+                                    Мне очень повезло! Я случайно попала в салон красоты S&Mitler, когда возвращалась с работы. Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!
+                                </div>
+                            </div>
+
+                            <div class="review">
+                                <div class="review-header">Александра</div>
+                                <div class="review-data">20.05.13 (Маникюр)</div>
+                                <div class="review-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="review-text">
+                                    Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!
+                                </div>
+                            </div>
+
+                            <div class="review">
+                                <div class="review-header">Максим</div>
+                                <div class="review-data">11.03.15 (Стрижка)</div>
+                                <div class="review-stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="review-text">
+                                    Мне очень повезло! Я случайно попала в салон красоты S&Mitler, когда возвращалась с работы. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-partners section-overlay" style="background-image: url('img/bg-3.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="h2 text-center">Наши партнёры</h2>
+                    </div>
+
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="owl-carousel partners">
+                            <div class="partner">
+                                <img src="img/partners/brend1.png" alt="Партнёр">
+                            </div>
+                            <div class="partner">
+                                <img src="img/partners/brend2.png" alt="Партнёр">
+                            </div>
+                            <div class="partner">
+                                <img src="img/partners/brend3.png" alt="Партнёр">
+                            </div>
+                            <div class="partner">
+                                <img src="img/partners/brend4.png" alt="Партнёр">
+                            </div>
+                            <div class="partner">
+                                <img src="img/partners/brend2.png" alt="Партнёр">
+                            </div>
+                            <div class="partner">
+                                <img src="img/partners/brend1.png" alt="Партнёр">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="my-footer">
+        <div class="mail-footer">   <!-- в нем находится весь футер -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4 col-xs-12">
+                        <div class="footer-column"> <!-- колонка футера, для удобства и понимания -->
+                            <img src="img/logo-1.svg" alt="Салон красоты" class="logo-footer">
+                            <p>Салон красоты <br>бизнес-класса в Киеве</p>
+                            <div class="social-footer">
+                                <nav class="soc">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
+                        <div class="footer-column">
+                            <nav class="footer-menu">
+                                <ul>
+                                    <li class="active"><a href="#">Парикмахерский сервис</a></li>
+                                    <li><a href="#">Косметологический сервис</a></li>
+                                    <li><a href="#">Маникюрный сервис</a></li>
+                                    <li><a href="#">Массаж и SPA</a></li>
+                                    <li><a href="#">Солярий</a></li>
+                                    <li><a href="#">Наши специиалисты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-4 col-xs-12">
+                        <div class="footer-column">
+                            <p class="footer-addr"><i class="fa fa-location-arrow"></i>г. Киев, ул. Ольгинська, 3, м. Профсоюзная</p>
+                            <p class="footer-addr"><i class="fa fa-clock-o"></i>Время работы: ежедневно, <br>10:00 - 22:00</p>
+                            <p class="footer-addr">
+                                <span class="footer-phone"><i class="fa fa-mobile"></i>+3 (80) 68-530-24-33</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class="footer-column">
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10714.566452273088!2d35.0496091!3d47.82716224999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1513071298058" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top" title="Наверх"><i class="fa fa-angle-double-up"></i></div>
+
+<link rel="stylesheet" href="libs/css-hamburgers/hamburgers.css">
+<link rel="stylesheet" href="libs/jQuery.mmenu-master/jquery.mmenu.all.css">
+<link rel="stylesheet" href="libs/font-awesome-4.7.0/font-awesome.min.css">
+<link rel="stylesheet" href="libs/OwlCarousel2-2.2.1/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="libs/OwlCarousel2-2.2.1/assets/owl.theme.default.min.css">
+<link rel="stylesheet" href="libs/fotorama-4.6.4/fotorama.css">
+<link rel="stylesheet" href="libs/selectize/css/selectize.css">
+<link rel="stylesheet" href="libs/bootstrap-grid/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css"> <!-- выполняется после предыдущего кода и тем самым перекрывает предыдущие стили -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="libs/jQuery.mmenu-master/jquery.mmenu.all.js"></script>
+<script src="libs/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+<script src="libs/equalHeights/equalheights.js"></script>
+<script src="libs/fotorama-4.6.4/fotorama.js"></script>
+<script src="libs/selectize/js/standalone/selectize.min.js"></script>
+<script src="js/common.js"></script>    <!-- Всегда в конце -->
+</body>
+</html>
